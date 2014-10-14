@@ -1,0 +1,21 @@
+<div class="jumbotron">
+<div class="container">
+	<h2>Computer Played: </h2><h1><%= @computer_guess.capitalize  %></h1>
+	<h2><%= @message %></h2>
+	<p><%= Time.now %></p>
+
+	<% if @computer_guess.downcase == 'rock' %>
+		<div class="row">
+		  <div class="col-xs-6 col-md-4">
+		    <a href="#" class="thumbnail">
+		      <img src="rock.jpg" alt="rock out" class="thumbnail">
+		    </a>
+		  </div>
+		</div>
+	<% end %>
+
+</div>
+</div>
+
+<h3><a href="<%= @user_guess %>" >Play <%= @user_guess.capitalize %> Again</a></h3>
+<img src="http://i0.kym-cdn.com/photos/images/original/000/059/605/hamsterdance520110724-22047-bbr7zj.gif" alt="">

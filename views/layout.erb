@@ -1,0 +1,42 @@
+<!-- layour template start -->
+<!doctype html>
+<html>
+<head>
+	<title><%= @title %></title>
+
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+</head>
+<body>
+<header id="header" class="">
+	<ul class="nav nav-tabs">
+		<li><a href="/">home</a></li>
+		<li><a href="/about">about</a></li>
+		<li><a href="/dice">roll the dice</a></li>
+	</ul>
+</header><!-- /header -->
+<!-- layour template end -->
+
+<%= yield %>
+
+<!-- layour template start -->
+
+<footer>
+<ul class="nav nav-tabs">
+	<% @weapons.each do |weapon| %>
+	<li>
+		<a href=" <%= weapon %> " >
+			<%= weapon.capitalize  %>
+		</a>
+	</li>
+	<% end %>
+</ul>
+
+</footer>
+
+</body>
+</html>
+<!-- layour template end -->
